@@ -4,7 +4,7 @@
 
 @layer components {
   .item-name {
-    @apply uppercase
+    @apply uppercase w-24
   }
   .li-open-bg {
     @apply bg-indigo-900

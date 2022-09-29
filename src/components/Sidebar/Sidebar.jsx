@@ -7,12 +7,15 @@ import ShowChartIcon from '@mui/icons-material/ShowChart';
 import EarbudsIcon from '@mui/icons-material/Earbuds';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
+import PianoIcon from '@mui/icons-material/Piano';
 import Collapse from '@mui/material/Collapse';
 const Sidebar = () => {
 
   const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+
     setOpen(!open);
   };
 
@@ -33,13 +36,19 @@ const Sidebar = () => {
   </nav>
   <div className="hidden lg:block navbar-menu relative z-50">
     <div className="navbar-backdrop fixed lg:hidden inset-0 bg-gray-800 opacity-10"></div>
-    <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-3/4 lg:w-80 sm:max-w-xs pt-6 pb-8 bg-gray-800 overflow-y-auto">
+    <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-3/4 lg:w-100 sm:max-w-xs pt-6 pb-8 pr-4 bg-gray-800 overflow-y-visible">
       <div className="flex w-full items-center px-6 pb-6 mb-6 lg:border-b border-gray-700">
         <a className="text-xl text-white font-semibold" href="#">
-          <span>sociality.io</span>
+          <span><strong className='text-black'>sociality</strong>.io</span>
         </a>
       </div>
-      <div className="px-4 pb-6">
+      <div className="pb-6 flex flex-row">
+      <ul className="ml-0 w-32 text-sm font-medium bg-gray-700">
+        <li><PianoIcon fontSize='large' className='mr-4 ml-4 text-gray-600'/></li>
+        <li><PianoIcon fontSize='large' className='mr-4 ml-4 text-gray-600'/></li>
+        <li><PianoIcon fontSize='large' className='mr-4 ml-4 text-gray-600'/></li>
+        <li><PianoIcon fontSize='large' className='mr-4 ml-4 text-gray-600'/></li>
+      </ul>
         <ul className="mb-8 text-sm font-medium">
           <li>
             <a className="flex items-center pl-3 py-3 pr-4 text-gray-50 rounded" href="#">
@@ -47,20 +56,20 @@ const Sidebar = () => {
                 <NotificationsNoneIcon/>
               </span>
               <span className='item-name'>notifications</span>
-              <span className="inline-block ml-auto">
-                <span className="flex justify-center items-center ml-16 bg-indigo-500 w-6 h-6 text-xs rounded-full">4</span>
+              <span className="inline-block pl-16">
+                <span className="flex justify-center items-center ml-4 bg-indigo-500 w-6 h-6 text-xs rounded-full">4</span>
               </span>
             </a>
           </li>
 
           <li onClick={handleClick} className={open ? 'li-open-bg' : 'bg-gray-800'}>
-            <a className="flex items-center pl-3 py-3 pr-2 text-gray-50 hover:bg-gray-900 rounded" href="#">
+            <a className="flex items-center pl-3 py-3 pr-4 text-gray-50 hover:bg-gray-900 rounded" href="#">
               <span className="inline-block mr-3">
                 <ShowChartIcon/>
               </span>
 
               <span className='item-name'>summary</span>
-              <span className="inline-block ml-32">
+              <span className="inline-block pl-16">
                 {open ? <RemoveIcon fontSize='small'/> : <AddIcon />}
               </span>
             </a>
@@ -71,7 +80,7 @@ const Sidebar = () => {
                 <HistoryEduIcon/>
               </span>
               <span className='item-name'>publish</span>
-              <span className="inline-block ml-auto">
+              <span className="inline-block pl-16">
                 {open ? <RemoveIcon fontSize='small'/> : <AddIcon />}
               </span>
             </a>
@@ -88,7 +97,7 @@ const Sidebar = () => {
                 <ForumIcon/>
               </span>
               <span className='item-name'>engage</span>
-              <span className="inline-block ml-auto">
+              <span className="inline-block pl-16">
                 {open ? <RemoveIcon fontSize='small'/> : <AddIcon />}
               </span>
             </a>
@@ -99,7 +108,7 @@ const Sidebar = () => {
                 <EarbudsIcon/>
               </span>
               <span className='item-name'>listen</span>
-              <span className="inline-block ml-auto">
+              <span className="inline-block pl-16">
                 {open ? <RemoveIcon fontSize='small'/> : <AddIcon />}
               </span>
             </a>
@@ -110,7 +119,7 @@ const Sidebar = () => {
                 <BarChartIcon/>
               </span>
               <span className='item-name'>report</span>
-              <span className="inline-block ml-auto">
+              <span className="inline-block pl-16">
                 {open ? <RemoveIcon fontSize='small'/> : <AddIcon />}
               </span>
             </a>
