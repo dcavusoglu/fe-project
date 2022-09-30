@@ -22,7 +22,7 @@
 
 @layer Pages {
   .home-container {
-    @apply bg-purple-300 absolute top-0 bottom-0 right-0 w-4/5
+    @apply bg-purple-300 absolute top-0 bottom-0 right-0 w-full
   }
 }
 

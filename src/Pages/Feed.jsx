@@ -13,7 +13,7 @@ const dateFirst = data.posts_by_date['2021-06-17'];
 const dateSecond = data.posts_by_date['2021-07-01'];
 
   return (
-    <div className='flex flex-col mt-4 ml-6'>
+    <div className='flex flex-col mt-4 ml-72'>
       <div>
         <span>{Moment('2021-06-17').format('DD MMMM YYYY')}</span>
         <div className='flex flex-row mt-8 mb-6'>
