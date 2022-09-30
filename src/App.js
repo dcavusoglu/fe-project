@@ -13,8 +13,8 @@ function App() {
         <BrowserRouter>
           <Sidebar/>
           <Routes>
-            <Route path='/' element={Home}/>
-            <Route path='/feed' element={Feed}/>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/feed' element={<Feed/>}/>
           </Routes>
         </BrowserRouter>
 

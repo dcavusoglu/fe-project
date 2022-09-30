@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @layer components {
   .item-name {
     @apply uppercase w-24
@@ -12,4 +18,19 @@
   .collapse-menu-item {
     @apply flex text-white ml-1 py-1
   }
+}
+
+@layer Pages {
+  .home-container {
+    @apply bg-purple-300 absolute top-0 bottom-0 right-0 w-4/5
+  }
+}
+
+
+ul {
+  padding-left: 0px !important;
+}
+
+ul a, div a {
+  text-decoration: none;
 }

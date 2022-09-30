@@ -3,8 +3,10 @@ import Feed from './Feed'
 
 const Home = () => {
   return (
-    <div>
-      <Feed/>
+    <div className='home-container'>
+      <div className='ml-10'>
+        <Feed/>
+      </div>
     </div>
   )
 }
