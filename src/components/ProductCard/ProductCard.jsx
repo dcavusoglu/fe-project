@@ -13,7 +13,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Moment from 'moment';
-
+import noImage from '../../assets/no-post-image.png'
 const ProductCard = ({item}) => {
   return (
     <div className='border-2 border-gray-400 rounded-xxl flex flex-row items-center mr-8 productcard-wrapper'>
@@ -34,14 +34,17 @@ const ProductCard = ({item}) => {
               <MoreHorizIcon className='rounded-full border-2 border-gray-300 text-gray-300 ml-2 card-icon'/>
             </div>
           </div>
-          <div>
-
+          <div className='mt-4 text-justify'>
+            <p>{item.entry.message}</p>
+          </div>
+          <div className='w-72 h-72 ml-5'>
+            <img src={item.entry.image ? item.entry.image : noImage } alt='itemm'/>
           </div>
           <div>
-
-          </div>
-          <div>
-
+            <FavoriteBorderIcon/>
+            <RepeatIcon/>
+            <ShareIcon/>
+            <VisibilityIcon/>
           </div>
         </div>
       </div>
