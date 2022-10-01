@@ -16,23 +16,23 @@ import Moment from 'moment';
 
 const ProductCard = ({item}) => {
   return (
-    <div className='border-2 border-gray-400 rounded-xxl flex flex-row items-center w-64 h-64 mr-8'>
-      <div className='bg-green-400 w-8 h-64 flex flex-row items-center'>
-        <span className='ml-1.5'>
+    <div className='border-2 border-gray-400 rounded-xxl flex flex-row items-center mr-8 productcard-wrapper'>
+      <div className='bg-green-400 card-left'>
+        <span>
           {(item.account.channel === 'instagrambusiness') ? <InstagramIcon/>
           : (item.account.channel === 'facebook') ? <FacebookIcon/>
           :<TwitterIcon/>}
         </span>
       </div>
-      <div className='bg-gray-100 w-56 h-64'>
+      <div className='bg-gray-100 card-right'>
         <div className='m-4'>
-          <div className='flex items-center'>
-            <span className='text-xs text-gray-400'>{Moment(item.published_at).format('DD MMMM YYYY - hh:mm')}</span>
-            <span className='flex items-center ml-4'>
-              <BlockIcon fontSize='small' className='text-gray-400'/>
-              <DeleteOutlineIcon className='text-gray-400'/>
-              <MoreHorizIcon className='rounded-full border-2 border-gray-400 text-gray-400' fontSize='small'/>
-            </span>
+          <div className='card-top'>
+            <div className='text-m text-gray-400'>{Moment(item.published_at).format('DD MMMM YYYY - hh:mm')}</div>
+            <div className='flex items-center'>
+              <BlockIcon className='text-gray-300 card-icon'/>
+              <DeleteOutlineIcon className='text-gray-300 ml-2 card-icon'/>
+              <MoreHorizIcon className='rounded-full border-2 border-gray-300 text-gray-300 ml-2 card-icon'/>
+            </div>
           </div>
           <div>
 

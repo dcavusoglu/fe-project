@@ -26,7 +26,35 @@
   }
 }
 
+.productcard-wrapper {
+  height: 30rem;
+  width: 26rem;
+  border-radius: 0.5rem;
+}
 
+.card-left {
+  height: 30rem;
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-right {
+  height: 30rem;
+  width: 22rem;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-icon{
+  font-size: 2rem!important;
+}
 ul {
   padding-left: 0px !important;
 }
