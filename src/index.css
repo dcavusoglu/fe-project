@@ -22,18 +22,18 @@
 
 @layer Pages {
   .home-container {
-    @apply bg-purple-300 absolute top-0 bottom-0 right-0 w-full
+    @apply bg-purple-300
   }
 }
 
 .productcard-wrapper {
-  height: 32rem;
+  height: 34rem;
   width: 28rem;
-  border-radius: 0.5rem;
+  /* border-radius: 0.8rem; */
 }
 
 .card-left {
-  height: 32rem;
+  height: 34rem;
   width: 4rem;
   display: flex;
   flex-direction: column;
@@ -42,8 +42,12 @@
 }
 
 .card-right {
-  height: 32rem;
+  height: 34rem;
   width: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-top {
@@ -53,12 +57,25 @@
   align-items: center;
 }
 .card-icon{
-  font-size: 2rem!important;
+  font-size: 1.5rem!important;
+  margin-right: 0.5rem;
 }
+.social-icon {
+  font-size: 3rem!important;
+}
+
+.card-content {
+  height: 30rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 ul {
   padding-left: 0px !important;
 }
 
-ul a, div a {
+ul a, div a, a {
   text-decoration: none;
 }
