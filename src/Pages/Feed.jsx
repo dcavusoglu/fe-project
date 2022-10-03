@@ -16,6 +16,9 @@ const dateSecond = data.posts_by_date['2021-07-01'];
     <div className='flex flex-col ml-72'>
       {/* buraya yeni bir component yapılacak status çekerek */}
       <div>
+        <span></span>
+      </div>
+      <div>
         <span>{Moment('2021-06-17').format('DD MMMM YYYY')}</span>
         <div className='flex flex-row mt-8 mb-6'>
           {dateFirst.map((item, index) => <ProductCard item={item} key={index}/>)}

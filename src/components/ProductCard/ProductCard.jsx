@@ -14,15 +14,28 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Moment from 'moment';
-import noImage from '../../assets/no-post-image.png'
-import { Link } from 'react-router-dom';
-
+import noImage from '../../assets/no-post-image.png';
+import classNames from 'classnames';
 const ProductCard = ({item}) => {
+  const defaultImage = noImage
+  const replaceImage = (error) => {
+        //replacement of broken Image
+        error.target.src = defaultImage;
+    }
+
+const className = classNames({
+      'card-left': true,
+      'rounded-l-xl': true,
+      'bg-yellow-400': item.status === 0,
+      'bg-green-400': item.status === 1,
+      'bg-blue-500': item.status === 2,
+      'bg-gray-400': item.status === 3,
+      'bg-red-400': item.status === 4,
+    });
   return (
     <a href={item.account.link} className='flex flex-row items-center mr-8 productcard-wrapper'>
-      <div className='bg-green-400 card-left rounded-l-xl'>
-
-        {/* className={(item.status === 0) ? bg-yellow-400 : (item.status === 1) ? bg-green-400 : (item.status === 2) ? bg-blue-500 : (item.status === 3) ? bg-gray-400 : (item.status === 4) ? bg-red-400 } */}
+      <div className={className} >
+        {/* className={`(${item.status} === 0) ? bg-yellow-400 : (${item.status} === 1) ? bg-green-400 : (${item.status} === 2) ? bg-blue-500 : (${item.status} === 3) ? bg-gray-400 : (${item.status} === 4) ? bg-red-400 } */}
         <span>
           {(item.account.channel === 'instagrambusiness') ? <InstagramIcon className='social-icon text-gray-200'/>
           : (item.account.channel === 'facebook') ? <FacebookIcon className='social-icon text-gray-200'/>
@@ -43,7 +56,7 @@ const ProductCard = ({item}) => {
             <p className='text-gray-700'>{item.entry.message}</p>
           </div>
           <div className='w-72 h-72'>
-            <img src={item.entry.image ? item.entry.image : noImage } alt='itemm'/>
+            <img src={item.entry.image} onError={replaceImage} alt='itemm'/>
           </div>
           <div className='flex items-center'>
             <div className='text-gray-300 mr-4'>
