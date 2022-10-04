@@ -41,7 +41,7 @@ const className = classNames({
           :<TwitterIcon className='social-icon text-gray-200'/>}
         </span>
       </div>
-      <div className='bg-gray-100 rounded-r-xl card-right'>
+      <div className='bg-white rounded-r-xl card-right'>
         <div className='card-content'>
           <div className='card-top'>
             <div className='text-m text-gray-400'>{Moment(item.published_at).format('DD MMMM YYYY - hh:mm')}</div>
@@ -54,7 +54,7 @@ const className = classNames({
           <div className='text-left'>
             <p className='text-gray-700'>{item.entry.message}</p>
           </div>
-          <div className='w-72 h-72'>
+          <div className='w-72 h-72 mr-auto ml-auto'>
             <img src={item.entry.image} onError={replaceImage} alt='itemm'/>
           </div>
           <div className='flex items-center'>

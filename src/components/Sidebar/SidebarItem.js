@@ -31,10 +31,10 @@ const SidebarItem = ({item}) => {
         <Collapse in={open} timeout="auto" unmountOnExit>
             {item.children?.map((child, index) => {
               return (
-                <div className='flex flex-row pl-3 py-3 pr-4 text-gray-50 ml-6' key={index} >
+                <a href={`/${child.title}`} className='flex flex-row pl-3 py-3 pr-4 text-gray-50 ml-6' key={index} >
                   <span className="inline-block mr-3">{child.icon}</span>
                   <span className='item-name'>{child.title}</span>
-                </div>
+                </a>
                 );
               }
             )}

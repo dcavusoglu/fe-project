@@ -1,11 +1,11 @@
 import React from 'react'
-import Feed from './Feed'
+
 
 const Home = () => {
   return (
-    <div className='home-container'>
+    <div className='main-container'>
       <div className='ml-10'>
-        <Feed/>
+        home
       </div>
     </div>
   )

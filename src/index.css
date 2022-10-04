@@ -18,11 +18,23 @@
   .collapse-menu-item {
     @apply flex text-white ml-1 py-1
   }
+  .super-logos {
+    @apply text-gray-600 rounded w-12 h-12 m-2
+  }
 }
 
 @layer Pages {
-  .home-container {
-    @apply bg-purple-300
+  .main-container {
+    @apply bg-gray-100
+  }
+  .date-item {
+    @apply text-gray-400 text-2xl
+  }
+  .feed-top {
+    @apply flex items-center justify-between
+  }
+  .status-name {
+    @apply mr-4 text-gray-400
   }
 }
 
@@ -71,6 +83,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 ul {
   padding-left: 0px !important;
