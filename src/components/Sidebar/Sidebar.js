@@ -31,11 +31,11 @@ const Sidebar = () => {
         </div>
         <div className="flex flex-row h-full">
           <SuperMenu/>
-          <ul className="mb-8 text-sm font-medium pl-0!important">
+          {/* <ul className="mb-8 text-sm font-medium pl-0!important">
             {SidebarData.map((item, index) => {
               return  <SidebarItem item={item} key={index}/>
             })}
-          </ul>
+          </ul> */}
         </div>
       </nav>
   </div>
