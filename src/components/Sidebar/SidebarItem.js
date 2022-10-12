@@ -24,7 +24,7 @@ const SidebarItem = ({item}) => {
             </span>
           :
             <span className="inline-block pl-10">
-              {open ? <RemoveIcon fontSize='small'/> : <AddIcon />}
+              {open ? <RemoveIcon fontSize='small'/> : <AddIcon/>}
             </span>
           }
         </a>
