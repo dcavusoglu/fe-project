@@ -12,7 +12,7 @@ const SidebarItem = ({item}) => {
   };
 
   return (
-      <li onClick={item.children && handleClick} className='ml-0 p-0 no-undeline'>
+      <li onClick={item.children && handleClick} className='ml-0 p-0 no-underline'>
         <a className={open? 'bg-pink-500 flex items-center pl-3 py-3 pr-4 text-white rounded' : 'flex items-center pl-3 py-3 pr-4 text-gray-50 hover:text-gray-50  hover:bg-gray-900 rounded'} href={item.path}>
           <span className="inline-block mr-3">
             {item.icon}
