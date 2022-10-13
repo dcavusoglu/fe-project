@@ -29,7 +29,7 @@ const Sidebar = () => {
             <span className='text-3xl text-black ml-12'><strong>sociality</strong>.io</span>
           </a>
         </div>
-        <div className="flex flex-row h-full w-full">
+        <div className="h-full w-full">
           <SuperMenu/>
           {/* <ul className="mb-8 text-sm font-medium pl-0!important">
             {SidebarData.map((item, index) => {

@@ -6,7 +6,7 @@ import SidebarItem from './SidebarItem';
 const SuperMenu = () => {
 
   return (
-    <div className='flex flex-col bg-gray-700' >
+    <div className='bg-gray-700 w-full' >
       {SuperMenuLogos.map((menu, index) => {
         return <SuperMenuItem menu={menu} key={index}>
           {SidebarData.map((item, index) => {
