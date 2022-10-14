@@ -9,14 +9,15 @@ const SuperMenuItem = ({menu, children}) => {
   };
 
   return (
-    <span>
+    <span id="myGroup">
       <div className={open ? "bg-gray-800" : ""} onClick={handleClick}>
-          <img src={menu.image} alt='logos' className={open ? 'opacity-2 super-logos' : 'super-logos opacity-10'}/>
+          <img src={menu.image} alt='logos'  className={open ? 'opacity-2 super-logos' : 'super-logos opacity-10'}/>
       </div>
       {/* sidebar opens at the top */}
-        <Collapse in={open} timeout="auto" unmountOnExit className={open ? "bg-gray-800 mt-0 fixed top-20 left-16" : "mb-0"}>
-          {children}
-        </Collapse>
+      <Collapse in={open} timeout="auto" unmountOnExit data-bs-parent="#myGroup" className={open ? "bg-gray-800 mt-0 fixed top-20 left-16" : "mb-0"}>
+        {children}
+      </Collapse>
+
     </span>
   )
 }

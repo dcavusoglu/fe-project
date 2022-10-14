@@ -6,11 +6,11 @@ import SidebarItem from './SidebarItem';
 const SuperMenu = () => {
 
   return (
-    <div className='bg-gray-700 w-full' >
+    <div className='bg-gray-700 h-full w-16 fixed' id="myGroup" >
       {SuperMenuLogos.map((menu, index) => {
-        return <SuperMenuItem menu={menu} key={index}>
+        return <SuperMenuItem menu={menu} key={index} data-parent="#myGroup">
           {SidebarData.map((item, index) => {
-            return  <SidebarItem item={item} key={index}/>
+            return  <SidebarItem item={item} key={index} />
           })}
         </SuperMenuItem>
       })}

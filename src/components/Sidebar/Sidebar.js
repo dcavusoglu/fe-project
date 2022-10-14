@@ -24,7 +24,7 @@ const Sidebar = () => {
       <div className="navbar-backdrop fixed lg:hidden inset-0 bg-gray-800 opacity-10"></div>
       <nav className="fixed top-0 left-0 bottom-0 flex flex-col  sm:max-w-xs pb-8 bg-gray-800 overflow-y-visible">
         {/* navdan w-3/4 silindi */}
-        <div className="flex w-full items-center pt-3 pb-3 px-6 lg:border-b border-gray-700 bg-gray-600">
+        <div className="flex items-center pt-3 pb-3 px-10 lg:border-b border-gray-700 bg-gray-600">
           <a className="text-xl text-white font-semibold" href="#">
             <span className='text-3xl text-black ml-12'><strong>sociality</strong>.io</span>
           </a>
