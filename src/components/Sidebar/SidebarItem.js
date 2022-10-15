@@ -7,7 +7,7 @@ const SidebarItem = ({item}) => {
 
   const [open, setOpen] = useState(false);
 
-  const handleClick = (e) => {
+  const handleClick = () => {
 
     setOpen(!open);
   };
@@ -18,7 +18,7 @@ const SidebarItem = ({item}) => {
           <span className={open ? "inline-block mr-3": "text-pink-500 inline-block mr-3"}>
             {item.icon}
           </span>
-          <span className='item-name'>{item.title}</span>
+          <span className='uppercase w-24'>{item.title}</span>
           {item.title === 'notifications' ?
             <span className="inline-block pl-10">
               <span className="flex justify-center items-center border-2 border-gray-500 w-6 h-6 text-xs rounded">4</span>
@@ -29,12 +29,12 @@ const SidebarItem = ({item}) => {
             </span>
           }
         </a>
-        <Collapse in={open} timeout="auto" appear={true} >
+        <Collapse in={open} appear={true} timeout="auto" unMountOnEnter>
             {item.children?.map((child, index) => {
               return (
                 <a href={`/${child.title}`} className='flex flex-row pl-3 py-3 pr-4 text-gray-50 ml-6 hover:text-pink-500' key={index} >
                   <span className="inline-block mr-3">{child.icon}</span>
-                  <span className='item-name'>{child.title}</span>
+                  <span className='uppercase w-24'>{child.title}</span>
                 </a>
                 );
               }

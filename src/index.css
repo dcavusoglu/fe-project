@@ -8,41 +8,9 @@
   box-sizing: border-box;
 }
 
-@layer components {
-  .item-name {
-    @apply uppercase w-24
-  }
-  .li-open-bg {
-    @apply bg-indigo-900
-  }
-  .collapse-menu-item {
-    @apply flex text-white ml-1 py-1
-  }
-  .super-logos {
-    @apply rounded w-12 h-12 mt-2 mr-2 ml-2 mb-0
-  }
-}
 
-@layer Pages {
-  .main-container {
-    @apply bg-gray-100
-  }
-  .date-item {
-    @apply text-gray-400 text-2xl
-  }
-  .feed-top {
-    @apply flex items-center justify-between
-  }
-  .status-name {
-    @apply mr-4 text-gray-400
-  }
-}
 
-.productcard-wrapper {
-  height: 34rem;
-  width: 28rem;
-  /* border-radius: 0.8rem; */
-}
+
 
 .card-left {
   height: 34rem;
@@ -53,21 +21,6 @@
   justify-content: center;
 }
 
-.card-right {
-  height: 34rem;
-  width: 24rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
 .card-icon{
   font-size: 1.5rem!important;
   margin-right: 0.5rem;
@@ -84,13 +37,6 @@
   justify-content: space-between;
 }
 
-
-ul {
-  padding-left: 0px !important;
-}
-
-ul a, div a, a {
+div a, a {
   text-decoration: none;
 }
-
-

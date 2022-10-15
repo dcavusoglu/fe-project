@@ -31,11 +31,6 @@ const Sidebar = () => {
         </div>
         <div className="h-full w-full">
           <SuperMenu/>
-          {/* <ul className="mb-8 text-sm font-medium pl-0!important">
-            {SidebarData.map((item, index) => {
-              return  <SidebarItem item={item} key={index}/>
-            })}
-          </ul> */}
         </div>
       </nav>
   </div>

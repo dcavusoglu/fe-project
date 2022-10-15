@@ -32,8 +32,9 @@ const className = classNames({
       'bg-gray-400': item.status === 3,
       'bg-red-400': item.status === 4,
     });
+
   return (
-    <a href={item.account.link} className='flex flex-row items-center mr-8 productcard-wrapper'>
+    <a href={item.account.link} className='flex flex-row items-center mr-8 w-[28rem] h-[32rem]'>
       <div className={className} >
         <span>
           {(item.account.channel === 'instagrambusiness') ? <InstagramIcon className='social-icon text-gray-200'/>
@@ -41,9 +42,9 @@ const className = classNames({
           :<TwitterIcon className='social-icon text-gray-200'/>}
         </span>
       </div>
-      <div className='bg-white rounded-r-xl card-right'>
-        <div className='card-content'>
-          <div className='card-top'>
+      <div className='bg-white rounded-r-xl h-[34rem] w-96 flex flex-col items-center justify-center '>
+        <div className='flex flex-col justify-between w-80 h-[30rem] '>
+          <div className='flex flex-row justify-between items-center'>
             <div className='text-m text-gray-400'>{Moment(item.published_at).format('DD MMMM YYYY - hh:mm')}</div>
             <div className='flex items-center'>
               {item.status === 0 ? <BlockIcon className='text-gray-300 card-icon'/> : <CheckIcon className='text-gray-300 card-icon'/> }
