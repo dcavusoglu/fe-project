@@ -26,7 +26,7 @@ const ProductCard = ({item}) => {
 const className = classNames({
       'card-left': true,
       'rounded-l-xl': true,
-      'bg-yellow-400': item.status === 0,
+      'bg-orange-400': item.status === 0,
       'bg-green-400': item.status === 1,
       'bg-blue-500': item.status === 2,
       'bg-gray-400': item.status === 3,
