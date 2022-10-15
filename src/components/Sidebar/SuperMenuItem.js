@@ -7,17 +7,17 @@ const SuperMenuItem = ({menu, children, active, multiple, onToggle}) => {
   const isActive = () => (multiple ? open : active);
 
   const handleClick = () => {
-    setOpen((v) => !v);
+    setOpen(v => !v);
     onToggle();
   };
 
   return (
     <span id="myGroup">
-      <div className={open ? "bg-gray-800" : ""} onClick={handleClick}>
-          <img src={menu.image} alt='logos'  className={open ? 'opacity-2 super-logos' : 'super-logos opacity-10'}/>
+      <div className={isActive() ? "bg-gray-800" : ""} onClick={handleClick}>
+          <img src={menu.image} alt='logos'  className={isActive() ? 'opacity-2 super-logos animate-pulse' : 'super-logos opacity-10'}/>
       </div>
       {/* sidebar opens at the top */}
-        <Collapse in={isActive()} timeout="auto" unmountOnExit data-bs-parent="#myGroup" className={open ? "bg-gray-800 mt-0 fixed top-20 left-16" : "mb-0"}>
+        <Collapse in={isActive()} timeout={{enter: 2000}} className={isActive() ? "animate-fade-in bg-gray-800 mt-0 fixed top-20 left-16" : "hidden"}>
           {children}
         </Collapse>
 
