@@ -5,7 +5,7 @@ import LogoFour from '../../assets/Logo4.png';
 import LogoFive from '../../assets/Logo5.png';
 import LogoSix from '../../assets/Logo6.png';
 
-export const SuperMenuLogos = [
+export const BrandTabLogos = [
   {
     "image": LogoOne
   },

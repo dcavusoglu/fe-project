@@ -34,7 +34,7 @@ const className = classNames({
     });
 
   return (
-    <a href={item.account.link} className='flex flex-row items-center mr-8 w-[28rem] h-[32rem]'>
+    <a href={item.account.link} target="_blank" rel="noreferrer" className='flex flex-row items-center mr-8 w-[28rem] h-[32rem]'>
       <div className={className} >
         <span>
           {(item.account.channel === 'instagrambusiness') ? <InstagramIcon className='social-icon text-gray-200'/>

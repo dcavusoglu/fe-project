@@ -3,17 +3,16 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import Collapse from '@mui/material/Collapse';
 
-const SidebarItem = ({item}) => {
+const ContentMenu = ({item}) => {
 
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
-
     setOpen(!open);
   };
 
   return (
-      <div onClick={item.children && handleClick} className='ml-0 p-0 no-underline'>
+      <div onClick={handleClick} className='ml-0 p-0 no-underline'>
         <a className={open? 'bg-pink-500 flex items-center pl-3 py-3 pr-4 text-white rounded' : 'flex items-center pl-3 py-3 pr-4 text-gray-50 hover:text-gray-50  hover:bg-gray-900 rounded'} href={item.path}>
           <span className={open ? "inline-block mr-3": "text-pink-500 inline-block mr-3"}>
             {item.icon}
@@ -29,10 +28,13 @@ const SidebarItem = ({item}) => {
             </span>
           }
         </a>
-        <Collapse in={open} appear={true} timeout="auto" unMountOnEnter>
+        <Collapse
+          in={open}
+          timeout="auto"
+          >
             {item.children?.map((child, index) => {
               return (
-                <a href={`/${child.title}`} className='flex flex-row pl-3 py-3 pr-4 text-gray-50 ml-6 hover:text-pink-500' key={index} >
+                <a href={child.title === 'Feed' ? `/${child.title}` : "/" } className='flex flex-row pl-3 py-3 pr-4 text-gray-50 ml-6 hover:text-pink-500' key={index} >
                   <span className="inline-block mr-3">{child.icon}</span>
                   <span className='uppercase w-24'>{child.title}</span>
                 </a>
@@ -44,4 +46,4 @@ const SidebarItem = ({item}) => {
   )
 }
 
-export default SidebarItem
+export default ContentMenu

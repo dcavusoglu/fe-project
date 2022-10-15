@@ -6,7 +6,7 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 
 
-export const SidebarData = [
+export const ContentMenuData = [
   {
     "title": "notifications",
     "icon": <NotificationsNoneIcon/>,
