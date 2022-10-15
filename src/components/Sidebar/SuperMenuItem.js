@@ -17,7 +17,7 @@ const SuperMenuItem = ({menu, children, active, multiple, onToggle}) => {
           <img src={menu.image} alt='logos'  className={isActive() ? 'opacity-2 super-logos animate-pulse' : 'super-logos opacity-10'}/>
       </div>
       {/* sidebar opens at the top */}
-        <Collapse in={isActive()} timeout={{enter: 2000}} className={isActive() ? "animate-fade-in bg-gray-800 mt-0 fixed top-20 left-16" : "hidden"}>
+        <Collapse in={isActive()} timeout={{enter: 1000}} className={isActive() ? "animate-fade-in bg-gray-800 mt-0 fixed top-20 left-16" : "hidden"}>
           {children}
         </Collapse>
 
